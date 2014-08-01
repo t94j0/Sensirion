@@ -25,6 +25,11 @@
  
 extern "C" {
   // AVR LibC Includes
+#if ARDUINO >= 100
+ #include "Arduino.h"
+#else
+ #include "WProgram.h"
+#endif
   #include <stddef.h>
   #include <stdint.h>
   #include <math.h>
